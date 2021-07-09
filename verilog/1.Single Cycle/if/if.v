@@ -17,6 +17,7 @@ module if(
 	output [31:0] 		addr_instr	,
 
 	output [31:0]		instr_out
+	
 );
 
 

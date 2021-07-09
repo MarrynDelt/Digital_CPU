@@ -8,7 +8,7 @@
 
 module instr(
 
-	input 		[31:0]		addr,
+	input 		[31:0]		addr	,
 
 	output reg 	[31:0]	instr_out
 );
