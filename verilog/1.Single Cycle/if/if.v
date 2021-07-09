@@ -14,10 +14,11 @@ module if(
 
 	input  [31:0]		jmp_to		,
 
+	output [31:0] 		addr_instr	,
+
 	output [31:0]		instr_out
 );
 
-	wire addr_instr;
 
 	pc if_pc(
 		.clk(clk)			,

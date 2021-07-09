@@ -8,9 +8,9 @@
 
 module instr(
 
-	input 				addr,
+	input 		[31:0]		addr,
 
-	output reg [31:0]	instr_out
+	output reg 	[31:0]	instr_out
 );
 
 	always@(addr) begin
