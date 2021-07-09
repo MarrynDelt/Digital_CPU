@@ -17,7 +17,9 @@ module ex(
 	input				sub_ctrl	,
 
 	output  [31:0]		data_out	,
+	output  [31:0]		addr_mem	,
 	output  [31:0]		jmp_to
+
 );
 
 	wire [31:0] data_in1;
@@ -45,6 +47,7 @@ module ex(
 
 		.data_alu1	(data_in1),
 		.data_alu2	(data_in2),
+		.addr_mem	(addr_mem),
 		.jmp_to		(jmp_to)
 
 	);
