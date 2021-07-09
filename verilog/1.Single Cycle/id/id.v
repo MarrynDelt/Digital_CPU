@@ -29,7 +29,7 @@ module reg(
 	assign rs2			= instr_in[24:20]	;
 	assign funct7		= instr_in[31:25]	;
 
-	assign jmp			=  {{13{funct7[6]}},rs1,funct3,rs2[0],funct7[5:0],rs2[4:1]}	;	//type J imm
+	assign jmp			=  {{13{funct7[6]}},rs1,funct3,rs2[0],funct7[5:0],rs2[4:1]}	;								//type J imm
 
 	//type U imm:{funct7,rs2,rs1,funct3}
 
