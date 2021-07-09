@@ -14,8 +14,8 @@ module ctrl(
 	input	[6:0]		funct7		,
 
 
-	output				load_en		,
-	output				store_en	,
+	output	[2:0]		load_code	,
+	output	[1:0]		store_code	,
 	output				wr_en		,
 
 	output				jmp_en		,
@@ -51,8 +51,8 @@ module ctrl(
 
 
 
-	assign load_en = type_I_load;
-	assign store_en = type_S;
+	assign load_code = type_I_load ? funct3 : 3'b111 ;
+	assign store_code = type_S ? funct3[1:0] : 2'b11 ;
 	assign wr_en = type_R | type_I_cal | J_jal | I_jalr | type_I_load;
 
 

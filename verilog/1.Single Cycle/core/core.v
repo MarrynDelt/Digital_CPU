@@ -111,8 +111,8 @@ ctrl cpu_ctrl(
 	.funct7		(funct7),
 
 
-	.load_en	()	,
-	.store_en	(),
+	.load_code	(),
+	.store_code	(),
 	.wr_en		(wr_en),
 
 	.jmp_en		(jmp_en),
