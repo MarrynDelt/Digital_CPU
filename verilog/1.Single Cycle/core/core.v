@@ -28,6 +28,7 @@ wire [31:0]		data_rs2;
 wire [31:0]		data_out;
 wire [31:0]		data_wr;
 wire [31:0]		data_mem;
+wire [31:0]		addr_mem;
 
 wire [2:0]		load_code;
 wire [1:0]		store_code;
@@ -101,6 +102,7 @@ ex cpu_ex(
 	.sub_ctrl	(sub_ctrl),
 
 	.data_out	(data_out),
+	.addr_mem	(addr_mem),
 	.jmp_to 	(jmp_to)
 );
 
@@ -141,8 +143,8 @@ mem mem_interact(
 
 	.clk		(clk),
 
-	.data_in	(data_rs1),
-	.addr		(),
+	.data_in	(data_rs2),
+	.addr		(addr_mem),
 	
 	.load_code	(load_code),
 	.store_code	(store_code),
