@@ -8,6 +8,7 @@ module ex(
 	input	[6:0]		operation	,
 	input 	[31:0]		data_rs1	,
 	input 	[31:0]		data_rs2	,
+	input 	[31:0]		jmp			,
 
 	input	[11:0]		imm			,
 
@@ -15,7 +16,8 @@ module ex(
 	input				shift_ctrl	,
 	input				sub_ctrl	,
 
-	output  [31:0]		data_out
+	output  [31:0]		data_out	,
+	output  [31:0]		jmp_to
 );
 
 	wire [31:0] data_in1;
@@ -38,11 +40,12 @@ module ex(
 		.operation	(operation),
 		.data_rs1	(data_rs1),
 		.data_rs2	(data_rs2),
-
+		.jmp 		(jmp),
 		.imm		(imm),
 
 		.data_alu1	(data_in1),
 		.data_alu2	(data_in2),
+		.jmp_to		(jmp_to)
 
 	);
 endmodule
