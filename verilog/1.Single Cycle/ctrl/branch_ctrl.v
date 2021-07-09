@@ -11,6 +11,7 @@ module branch_ctrl(
 	input [2:0]		funct3		,
 
 	output	reg		jmpb
+
 );
 	
 	always@(*) begin
