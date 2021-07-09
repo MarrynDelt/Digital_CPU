@@ -18,12 +18,12 @@ module ctrl(
 	output				store_en	,
 	output				wr_en		,
 
-	output				shift_ctrl	,
-	output				sub_ctrl	,
-
 	output				jmp_en		,
 	output				jmpr_en		,
-	output				jmpb_en		
+	output				jmpb_en		,
+
+	output				shift_ctrl	,
+	output				sub_ctrl	
 
 );
 	wire	type_R;
