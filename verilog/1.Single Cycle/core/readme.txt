@@ -5,6 +5,7 @@ the interconnect of all the modules in CPU
 ver 1.0:
 
 ·do not support operations:
+	type-U operations
 	fence
 	fence.i
 	ecall
