@@ -4,7 +4,7 @@
 //2021.07.09
 
 
-module reg(
+module id(
 	input	[31:0]		instr_in	,
 
 	output 	[6:0]		operation	,
