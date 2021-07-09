@@ -9,7 +9,7 @@ module if(
 	input 				clk,
 	input				rst_n,
 
-	output [31:0]		instr
+	output [31:0]		instr_out
 );
 
 	wire addr_instr;
@@ -22,7 +22,7 @@ module if(
 
 	instr if_instr_mem(
 		.addr(addr_instr)	,
-		.instr_out(instr)
+		.instr_out(instr_out)
 	);
 
 endmodule
