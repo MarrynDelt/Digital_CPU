@@ -14,7 +14,7 @@ module pc(
 
 	input				jmp_en		,
 	input				jmpr_en		,
-	input				jmpj_en		,
+	input				jmpb_en		,
 
 	input	[31:0]		jmp_to		,
 
