@@ -3,7 +3,7 @@
 //Created by Chesed
 //2021.07.09
 
-module ctrl(
+module control(
 
 	input 	[31:0]		data_rs1	,
 	input 	[31:0]		data_rs2	,
