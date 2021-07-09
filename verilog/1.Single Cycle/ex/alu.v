@@ -21,10 +21,10 @@ module alu(
 	always(*) begin
 		case(funct3)
 			3'b000:		begin																//ADDI,ADD,SUB
-							case(sub_ctrl):		
+							case(sub_ctrl)
 								1'b0:	data_out <= data_in1 + data_in2;					//ADDI,ADD
 								1'b1:	data_out <= data_in1 - data_in2;					//SUB
-							caseend		
+							endcase		
 						end		
 			3'b001:		data_out <= data_in1 << shamt;										//SLLI,SLL
 			3'b010:		begin																//SLTI,SLT
@@ -38,11 +38,11 @@ module alu(
 			3'b011:		data_out <= (data_in1 < data_in2) ? 32'd1 : 32'd0;					//SLTIU,SLTU
 			3'b100:		data_out <= data_in1 ^ data_in2;									//XORI,XOR
 			3'b101:		begin																//SRL,SRLI,SRA,SRAI
-							case(shift_ctrl
+							case(shift_ctrl)
 								1'b0:	data_out <= data_in1 >> shamt;						//SRL,SRLI
 								1'b1:	data_out <= {{32{data_in1[31]}},data_in1} >> shamt;	//SRA,SRAI
-							casee
-						e
+							endcase
+						end
 			3'b110:		data_out <= data_in1 | data_in2;									//ORI,OR
 			3'b110:		data_out <= data_in1 & data_in2;									//ANDI,AND	
 			default:	data_out <= 32'd0;
