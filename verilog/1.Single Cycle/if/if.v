@@ -10,7 +10,7 @@ module if(
 	input				rst_n,
 
 	output [31:0]		instr
-	);
+);
 
 	wire addr_instr;
 

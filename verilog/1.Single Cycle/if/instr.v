@@ -11,7 +11,7 @@ module instr(
 	input 				addr,
 
 	output reg [31:0]	instr
-	);
+);
 
 	always@(addr) begin
 		case(addr)
