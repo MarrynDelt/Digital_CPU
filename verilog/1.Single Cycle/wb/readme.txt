@@ -1,3 +1,6 @@
 wb module for CPU
 
-to decide which to write in register
+
+ver 1.0:
+·a mux
+·to decide which to write in register
