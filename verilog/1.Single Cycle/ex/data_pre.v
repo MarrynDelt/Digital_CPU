@@ -15,6 +15,8 @@ module data_pre(
 	output  [31:0]		data_alu1	,
 	output  [31:0]		data_alu2	,
 
+	output	[31:0]		addr_mem	,
+
 	output reg	[31:0]	jmp_to
 
 );
@@ -26,6 +28,8 @@ module data_pre(
 
 	assign data_alu1 = data_rs1;
 	assign data_alu2 = operation[5] ? data_rs2 : imm_ext;
+
+	assign addr_mem = data_rs2 + imm_ext;
 
 	always@(*) begin
 		case(operation[3:2])

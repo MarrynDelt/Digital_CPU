@@ -27,6 +27,10 @@ wire [31:0]		data_rs2;
 
 wire [31:0]		data_out;
 wire [31:0]		data_wr;
+wire [31:0]		data_mem;
+
+wire [2:0]		load_code;
+wire [1:0]		store_code;
 
 wire 			jmp_en;
 wire 			jmpr_en;
@@ -111,8 +115,8 @@ ctrl cpu_ctrl(
 	.funct7		(funct7),
 
 
-	.load_code	(),
-	.store_code	(),
+	.load_code	(load_code),
+	.store_code	(store_code),
 	.wr_en		(wr_en),
 
 	.jmp_en		(jmp_en),
@@ -127,11 +131,24 @@ ctrl cpu_ctrl(
 module wb(
 	.data_out	(data_out),
 	.data_addr	(addr_instr),
-	.data_mem	(),
+	.data_mem	(data_mem),
 	.operation	(operation),
 
 	.data_wr	(data_wr)
 );
 
+mem mem_interact(
+
+	.clk		(clk),
+
+	.data_in	(data_rs1),
+	.addr		(),
+	
+	.load_code	(load_code),
+	.store_code	(store_code),
+
+	.data_out	(data_mem)	
+
+);
 
 endmodule
