@@ -1,4 +1,7 @@
-ex module for cpu
+execute module for cpu
 
-data_pre: generate the number input to alu
-
+ver 1.0:
+·data_pre : 
+	choose the input for alu 
+	generate the destination of jump operation
+	generate the addr for memory access
