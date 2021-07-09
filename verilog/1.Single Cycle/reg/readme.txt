@@ -1,7 +1,8 @@
 general register module for cpu
 
-2 read ports & 1 write port
 
-x0	ROM	0
-
-when addr_rd == addr_wr,data_rd will be data_wr
+ver 1.0:
+·if addr_rd == addr_wr, then data_rd will be data_wr
+·x0 is always zero
+·2 read ports (for rs1&rs2)
+·1 write port (for rd)
