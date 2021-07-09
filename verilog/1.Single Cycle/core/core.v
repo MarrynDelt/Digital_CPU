@@ -24,6 +24,9 @@ wire [31:0]		jmp_to;
 wire [31:0]		data_rs1;
 wire [31:0]		data_rs2;
 
+wire [31:0]		data_out;
+wire [31:0]		data_wr;
+
 wire 			jmp_en;
 wire 			jmpr_en;
 wire 			jmpb_en;
@@ -70,7 +73,7 @@ reg general_reg(
 	.addr_wr	(addr_rd),
 	.addr_rd1	(addr_rs1),
 	.addr_rd2	(addr_rs2),
-	.data_wr	(),
+	.data_wr	(data_wr),
 
 
 	.data_rd1	(data_rs1),
@@ -91,7 +94,7 @@ ex cpu_ex(
 	.shift_ctrl	(shift_ctrl),
 	.sub_ctrl	(sub_ctrl),
 
-	.data_out	(),
+	.data_out	(data_out),
 	.jmp_to 	(jmp_to)
 );
 
@@ -118,4 +121,15 @@ ctrl cpu_ctrl(
 	.sub_ctrl	(sub_ctrl)
 
 );
+
+module wb(
+	.data_out	(data_out),
+	.data_addr	(),
+	.data_mem	(),
+	.operation	(operation),
+
+	.data_wr	(data_wr)
+);
+
+
 endmodule
