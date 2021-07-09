@@ -3,7 +3,7 @@
 //Created by Chesed
 //2021.07.09
 
-module control(
+module ctrl(
 
 	input 	[31:0]		data_rs1	,
 	input 	[31:0]		data_rs2	,
@@ -22,8 +22,7 @@ module control(
 	output				sub_ctrl	,
 
 	output				jmp_en		,
-	output				jmpr_en		,
-	output				jmpb_en		
+	output				jmpr_en		
 
 );
 	wire	type_R;
