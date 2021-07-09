@@ -54,5 +54,14 @@ module pc(
 		end
 	end
 
+	always @(posedge clk or negedge rst_n)begin
+		if(!rst_n) begin
+			addr => 32'h0;
+		end
+		else begin
+			addr => addr_next;
+		end
+	end
+
 endmodule
 
