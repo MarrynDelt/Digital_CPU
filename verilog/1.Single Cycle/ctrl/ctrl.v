@@ -22,8 +22,8 @@ module ctrl(
 	output				jmpr_en		,
 	output				jmpb_en		,
 
-	output				sub_ctrl	,
-	output				shift_ctrl	
+	output				shift_ctrl	,
+	output				sub_ctrl	
 
 );
 	wire	type_R;
