@@ -10,6 +10,7 @@ module core(
 );
 
 wire [31:0] 	instr;
+wire [31:0]		addr_instr;
 wire [6:0]		operation;
 wire [4:0]		addr_rd;
 wire [4:0]		addr_rs1;
@@ -45,6 +46,7 @@ if cpu_if(
 	.jmpj_en	(jmpb_en),
 	.jmp_to		(jmp_to	),
 
+	.addr_instr	(addr_instr),
 	.instr_out	(instr)
 );
 
@@ -124,7 +126,7 @@ ctrl cpu_ctrl(
 
 module wb(
 	.data_out	(data_out),
-	.data_addr	(),
+	.data_addr	(addr_instr),
 	.data_mem	(),
 	.operation	(operation),
 
