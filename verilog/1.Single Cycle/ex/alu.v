@@ -2,6 +2,7 @@
 //Single Cycle CPU
 //Created by Chesed
 //2021.07.09
+//2021.07.11
 
 module alu(
 
