@@ -2,6 +2,7 @@
 //Single Cycle CPU
 //Created by Chesed
 //2021.07.08
+//Edited in 2021.07.11
 
 
 module if(
@@ -14,9 +15,7 @@ module if(
 
 	input  [31:0]		jmp_to		,
 
-	output [31:0] 		addr_instr	,
-
-	output [31:0]		instr_out
+	output [31:0] 		addr_instr	
 	
 );
 
@@ -29,11 +28,6 @@ module if(
 		.jmpb_en(jmpb_en)	,
 		.jmp_to	(jmp_to	)	,
 		.addr(addr_instr)
-	);
-
-	instr if_instr_mem(
-		.addr(addr_instr)	,
-		.instr_out(instr_out)
 	);
 
 endmodule

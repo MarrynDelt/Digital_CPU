@@ -2,10 +2,11 @@
 //Single Cycle CPU
 //Created by Chesed
 //2021.07.09
+//Edited in 2021.07.11
 
 module core(
 	input	clk		,
-	input	rst_n	,
+	input	rst_n	
 
 );
 
@@ -51,8 +52,7 @@ if cpu_if(
 	.jmpj_en	(jmpb_en),
 	.jmp_to		(jmp_to	),
 
-	.addr_instr	(addr_instr),
-	.instr_out	(instr)
+	.addr_instr	(addr_instr)
 );
 
 
@@ -67,7 +67,7 @@ id cpu_id(
 	.funct7		(funct7),
 
 	.imm		(imm),
-	.jmp		(jmp),
+	.jmp		(jmp)
 
 );
 
@@ -139,7 +139,7 @@ module wb(
 	.data_wr	(data_wr)
 );
 
-mem mem_interact(
+mem_data mem_data_interact(
 
 	.clk		(clk),
 
@@ -151,6 +151,14 @@ mem mem_interact(
 
 	.data_out	(data_mem)	
 
+);
+
+
+mem_instr mem_instr_interact(
+
+	.addr(addr_instr),
+
+	.instr_out(instr)
 );
 
 endmodule

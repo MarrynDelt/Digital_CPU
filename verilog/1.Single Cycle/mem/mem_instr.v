@@ -2,11 +2,12 @@
 //Single Cycle CPU
 //Created by Chesed
 //2021.07.08
+//Edited in 2021.07.11
 
 
 
 
-module instr(
+module mem_instr(
 
 	input 		[31:0]		addr	,
 
@@ -20,6 +21,6 @@ module instr(
 	end
 
 	always@(addr) begin
-		instr_out <= {instr_mem[addr+3],instr_mem[addr+2],instr_mem[addr+1],instr_mem[addr]}
+		instr_out <= {instr_mem[addr+3],instr_mem[addr+2],instr_mem[addr+1],instr_mem[addr]};
 	end
 endmodule

@@ -2,9 +2,10 @@
 //Single Cycle CPU
 //Created by Chesed
 //2021.07.09
+//Edited in 2021.07.11
 
 
-module mem(
+module mem_data(
 
 	input 				clk			,
 
@@ -19,6 +20,10 @@ module mem(
 );
 
 	reg		[7:0]	data[0:255];
+
+	initial begin
+		/*insrt_data is empty*/
+	end
 
 	always@(load_code) begin
 		case(load_code)

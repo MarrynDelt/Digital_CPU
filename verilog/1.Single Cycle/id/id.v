@@ -15,7 +15,7 @@ module id(
 	output 	[6:0]		funct7		,
 
 	output  [11:0]		imm			,
-	output	[31:0]		jmp			,
+	output	[31:0]		jmp			
 
 
 
