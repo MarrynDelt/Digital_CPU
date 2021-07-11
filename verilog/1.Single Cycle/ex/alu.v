@@ -44,7 +44,7 @@ module alu(
 							endcase
 						end
 			3'b110:		data_out <= data_in1 | data_in2;									//ORI,OR
-			3'b110:		data_out <= data_in1 & data_in2;									//ANDI,AND	
+			3'b111:		data_out <= data_in1 & data_in2;									//ANDI,AND	
 			default:	data_out <= 32'd0;
 		endcase
 	end

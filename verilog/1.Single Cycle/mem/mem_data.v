@@ -7,7 +7,6 @@
 
 module mem_data(
 
-	input 				clk			,
 
 	input 		[31:0] 	data_in		,
 	input 		[31:0] 	addr		,

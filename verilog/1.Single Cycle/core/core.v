@@ -141,7 +141,6 @@ module wb(
 
 mem_data mem_data_interact(
 
-	.clk		(clk),
 
 	.data_in	(data_rs2),
 	.addr		(addr_mem),
