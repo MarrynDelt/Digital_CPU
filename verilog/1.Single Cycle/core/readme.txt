@@ -18,3 +18,7 @@ ver 1.0:
 	csrrci
 
 ·based on RV32I
+
+ver 1.1:
+·improve the structure of memory
+·use $readmemh to initialize memory

@@ -22,7 +22,7 @@ module mem_data(
 	reg		[7:0]	data[0:255];
 
 	initial begin
-		/*insrt_data is empty*/
+		$readmemh(".../1.Single Cycle/mem/memory_data.dat",data);
 	end
 
 	always@(load_code) begin
